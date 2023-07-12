@@ -1,0 +1,36 @@
+$main-light: #FFFFFF;
+$main-dark: #000000;
+$accent-color: #BB945F;
+
+$title-color: #0C0C0E;
+
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1280px;
+
+@mixin font($name, $weight) {
+  font: {
+    family: $name;
+    weight: $weight;
+    display: swap;    
+  }
+  font-style: normal;
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: #{$laptop}) {
+    @content;
+  }
+}
