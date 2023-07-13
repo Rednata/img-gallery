@@ -1,0 +1,30 @@
+.welcome {  
+
+  &__container {
+    height: 600px;  
+    background:
+    linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.10) 100%),
+    url('../img/welcome_bg_1440.jpg');
+    padding-top: 255px;
+  }
+
+  &__title-wrap {
+    background-color: $second-dark;
+    width: 600px;
+    margin-left: -20px;
+  }
+
+  &__title {
+    color: $main-light;
+    text-align: center;
+    font-family: Forum, Georgia, serif;
+    font-size: 40px;        
+    line-height: 50px; /* 125% */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  &__title-limit {
+    display: block;
+  }
+}
