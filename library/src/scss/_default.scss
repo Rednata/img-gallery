@@ -79,7 +79,7 @@ iframe {
   max-width: 1480px;
   padding: 0 20px;
   margin: 0 auto;
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 
 @include tablet {
@@ -97,5 +97,25 @@ iframe {
 @include desktop {
   body {
     // background-color: blue;
+  }
+}
+
+.title {
+  color: $second-dark;
+  font-family: Forum, Georgia, serif;
+  font-size: 40px;  
+  line-height: 40px; /* 100% */
+  letter-spacing: 2px;
+  text-transform: capitalize; 
+  text-align: center;  
+  
+  &::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 50px;
+    background-color: $second-dark;
+    margin: 0 auto;
+    margin-top: 20px;
   }
 }
