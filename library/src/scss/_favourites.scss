@@ -1,0 +1,49 @@
+.favour {
+	margin-bottom: 20px;
+
+	&__title {
+		margin-bottom: 39px;
+	}
+
+	&__direct {
+		font-weight: 700;		
+		margin-bottom: 38px;	
+	}
+
+	&__radio-wrap {
+		display: flex;
+		gap: 90px;		
+		margin-bottom: 40px;
+	}
+
+	&__radio-item {			
+		// border: 1px solid red;
+	}
+
+	&__label {			
+		
+	}
+
+	&__input {
+		margin-right: 20px;
+	}
+
+	&__input:checked+&__label{			
+		font-weight: 700;			
+	}
+
+	&__cards-wrap {
+		}
+}
+
+.cards-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-right: 40px;
+	gap: 40px;
+	margin-bottom: 40px;
+}
+
+.card-item {
+}
