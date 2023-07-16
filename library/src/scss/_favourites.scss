@@ -1,5 +1,5 @@
 .favour {
-	margin-bottom: 20px;
+	margin-bottom: 60px;
 
 	&__title {
 		margin-bottom: 39px;
@@ -7,17 +7,17 @@
 
 	&__direct {
 		font-weight: 700;		
-		margin-bottom: 38px;	
+		margin-bottom: 39px;	
 	}
 
 	&__radio-wrap {
 		display: flex;
 		gap: 90px;		
-		margin-bottom: 40px;
+		margin-bottom: 38px;
 	}
 
 	&__radio-item {			
-		// border: 1px solid red;
+		
 	}
 
 	&__label {			
@@ -25,7 +25,18 @@
 	}
 
 	&__input {
-		margin-right: 20px;
+		appearance: none;
+		
+
+		&:before {
+			content: '';
+			display: block;
+			width: 17px;
+			height: 17px;
+			border-radius: 50%;
+			border: 1px solid $main-dark;
+			margin-right: 15px;
+		}
 	}
 
 	&__input:checked+&__label{			
