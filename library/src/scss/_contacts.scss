@@ -1,0 +1,56 @@
+.contacts {
+  padding-top: 20px;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize; 
+  }
+
+  &__info {
+  }
+
+  &__info-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    
+  }
+
+  &__info-content {
+    margin-bottom: 40px;
+
+    :not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+
+  &__info-person-title {
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  &__info-text {
+
+
+    &_bold {
+      font-weight: 700;
+    }
+  }
+
+  &__map {
+  }
+
+  &__map-img {
+  }
+}
+.title {
+}

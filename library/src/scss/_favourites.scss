@@ -1,5 +1,6 @@
 .favour {
-	margin-bottom: 60px;
+	padding-top: 6px;
+	// margin-bottom: 60px;
 
 	&__title {
 		margin-bottom: 39px;
@@ -12,22 +13,21 @@
 
 	&__radio-wrap {
 		display: flex;
-		gap: 90px;		
+		gap: 92px;		
 		margin-bottom: 38px;
 	}
 
 	&__radio-item {			
-		
+		position: relative;
 	}
 
 	&__label {			
-		
+
 	}
 
 	&__input {
-		appearance: none;
+		appearance: none;				
 		
-
 		&:before {
 			content: '';
 			display: block;
@@ -36,11 +36,37 @@
 			border-radius: 50%;
 			border: 1px solid $main-dark;
 			margin-right: 15px;
+			padding: 5px;
+			
 		}
+
 	}
 
 	&__input:checked+&__label{			
 		font-weight: 700;			
+
+		&:before {
+			content: '';
+			display: block;			
+			width: 7px;
+			height: 7px;
+			border-radius: 50%;
+			background-color: $main-dark;
+		}
+		
+	}
+
+	&__input:checked+&__label:before{			
+		position: absolute;
+		top: 8px;
+		left: 5px;		
+		content: '';
+		display: block;		
+		width: 7px;
+		height: 7px;
+		border-radius: 50%;
+		background-color: $main-dark;
+		
 	}
 
 	&__cards-wrap {
