@@ -1,5 +1,6 @@
 .digital {
-  padding-top: 10px;
+  padding-top: 6px;
+  margin-bottom: 43px;
 
   &__title {
     margin-bottom: 38px;
@@ -88,11 +89,8 @@
     display: block;
     margin: 0 auto;
     font-weight: 700;
-    padding: 10px 40px;
-    border: 1px solid $second-dark;
-    border-radius: 2px;
-    background-color: transparent;
-    letter-spacing: 1px;;
+    padding: 10px 40px;   
+    letter-spacing: 1px;
   }
 }
 .get-card {
@@ -120,12 +118,9 @@
   }
 
   &__btn {
-    color: $second-dark;    
     font-size: 10px;
     font-weight: 700;    
     letter-spacing: 1px;
-    border-radius: 2px;
-    border: 1px solid $second-dark;
     min-width: 75px;
     min-height: 31px;
   }

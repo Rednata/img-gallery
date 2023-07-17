@@ -1,7 +1,13 @@
 .auth {
+  color: $main-light;
   width: 28px;
-  height: 28px;
-  background-image: url('../img/icon_profile.svg');
+  height: 28px;  
   background-color: transparent;
   border: none;
+  transition: color 0.5s;
+
+  &:hover {
+    color: $accent-color;
+    transition: color 0.5s;
+  }
 }

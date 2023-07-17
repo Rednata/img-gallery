@@ -1,28 +1,37 @@
 .favour {
-	padding-top: 6px;
-	// margin-bottom: 60px;
+	padding-top: 10px;
 
 	&__title {
-		margin-bottom: 39px;
+		margin-bottom: 38px;
 	}
 
 	&__direct {
 		font-weight: 700;		
 		margin-bottom: 39px;	
+
+		@include desktop {
+			text-align: center;
+		}
 	}
 
 	&__radio-wrap {
 		display: flex;
-		gap: 92px;		
-		margin-bottom: 38px;
+		gap: 43px;		
+		margin-bottom: 38px;		
+
+		@include desktop {
+			justify-content: center;
+		}
 	}
 
 	&__radio-item {			
+		display: flex;
+		align-items: center;
 		position: relative;
-	}
 
-	&__label {			
-
+		&:nth-child(3) {
+			margin-right: 15px;
+		}
 	}
 
 	&__input {
@@ -35,42 +44,39 @@
 			height: 17px;
 			border-radius: 50%;
 			border: 1px solid $main-dark;
-			margin-right: 15px;
+			margin-right: 21px;
 			padding: 5px;
+			// border: 1px solid red;
 			
 		}
 
 	}
 
-	&__input:checked+&__label{			
-		font-weight: 700;			
+	&__label {
+		display: block;
+		width: 110px;
+		// border: 1px solid red;
+	}
 
-		&:before {
-			content: '';
-			display: block;			
-			width: 7px;
-			height: 7px;
-			border-radius: 50%;
-			background-color: $main-dark;
-		}
-		
+	&__input:checked+&__label{			
+		font-weight: 700;				
 	}
 
 	&__input:checked+&__label:before{			
 		position: absolute;
-		top: 8px;
-		left: 5px;		
+		// top: 10px;
+		// left: 4px;		
+		top: 50%;
+		left: 4px;
+		transform: translate(5%, -40%);
 		content: '';
 		display: block;		
-		width: 7px;
-		height: 7px;
+		width: 8px;
+		height: 8px;
 		border-radius: 50%;
 		background-color: $main-dark;
 		
 	}
-
-	&__cards-wrap {
-		}
 }
 
 .cards-list {
@@ -80,7 +86,10 @@
 	margin-right: 40px;
 	gap: 40px;
 	margin-bottom: 40px;
-}
 
-.card-item {
+	@include desktop {
+		flex-direction: column;
+		max-width: 550px;
+		margin: 0 auto;
+	}
 }

@@ -1,11 +1,15 @@
 .welcome {    
-  margin-bottom: 20px;
-  
-  &__container {
-    height: 600px;  
-    background:
+  background:
     linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.10) 100%),
     url('../img/welcome_bg_1440.jpg');
+  margin-bottom: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__container {
+    height: 600px;  
+    
     padding-top: 255px;
   }
 

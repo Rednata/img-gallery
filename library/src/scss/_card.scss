@@ -52,28 +52,20 @@
     max-width: 355px;
   }
 
-  &__btn-buy {    
-    border-radius: 2px;
-    border: 1px solid $second-dark;
-    background-color: transparent;
+  &__btn-buy {       
     font-weight: 700;
     font-size: 10px;
     padding: 9px 27px;
     align-self:flex-start;
-    transition: background-color 0.6s;
 
     &:disabled {
+      border: 1px solid $accent-color;
+      color: $accent-color;
       cursor:auto
     }
 
-    &:hover {
-      border: 1px solid transparent;
-      background-color: $accent-color;
-      transition: background-color 0.6s;
-    }
-
     &:hover:disabled {
-      border: 1px solid $second-dark;
+      border: 1px solid $accent-color;
       background-color: transparent;
     }
 

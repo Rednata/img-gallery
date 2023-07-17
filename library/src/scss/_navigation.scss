@@ -3,10 +3,37 @@
   gap: 30px;
   color: $main-light;
   line-height: 50px; 
+  // border: 1px solid red;
+
+  @include desktop {
+    flex-wrap: wrap;
+    line-height: 40px;
+    gap: 0 150px;
+  }
 
   &__list {
   }
 
   &__item {
+  }
+
+  &__link {
+    &:after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 100%;
+      transform: scale(0);   
+    }
+    &:hover {      
+      color: $accent-color;
+      transition: color 0.5s;
+    }
+
+    &:hover:after {      
+      background-color: $accent-color;
+      transform: scale(1);   
+      transition: transform 0.5s;
+    }
   }
 }

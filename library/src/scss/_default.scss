@@ -1,6 +1,7 @@
 html {
   position: relative;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -117,5 +118,19 @@ iframe {
     background-color: $second-dark;
     margin: 0 auto;
     margin-top: 20px;
+  }
+}
+
+.button {
+  color: $second-dark;    
+  border-radius: 2px;
+  border: 1px solid $second-dark;
+  background-color: transparent;
+  transition: background-color 0.5s, border 0.5s;
+
+  &:hover {
+    border: 1px solid transparent;
+    background-color: $accent-color;
+    transition: background-color 0.5s, border 0.5s;
   }
 }
