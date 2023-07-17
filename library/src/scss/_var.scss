@@ -1,8 +1,8 @@
 $main-light: #FFFFFF;
 $main-dark: #000000;
 $accent-color: #BB945F;
-
-$title-color: #0C0C0E;
+$second-dark: #0C0C0E;
+$grey-color: #8E8E8E;
 
 $tablet: 768px;
 $laptop: 1024px;
@@ -18,19 +18,19 @@ $desktop: 1280px;
 }
 
 @mixin desktop {
-  @media (min-width: #{$desktop}) {
+  @media (max-width: #{$desktop}) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (min-width: #{$tablet}) {
+  @media (max-width: #{$tablet}) {
     @content;
   }
 }
 
 @mixin laptop {
-  @media (min-width: #{$laptop}) {
+  @media (max-width: #{$laptop}) {
     @content;
   }
 }

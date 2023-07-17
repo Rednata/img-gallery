@@ -1,0 +1,129 @@
+.digital {
+  padding-top: 6px;
+  margin-bottom: 43px;
+
+  &__title {
+    margin-bottom: 38px;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wrap-form {
+    min-width: 600px;
+  }
+
+  &__wrap-form-title {
+    font-weight: 400;
+    font-size: 30px; 
+    margin-bottom: 27px;
+    text-align: center;
+    word-spacing: 3px;    
+  }
+
+  &__form {
+    
+  }
+
+  &__get-card {
+  }
+}
+
+.title {
+}
+.form {
+  padding: 17px 17px 27px;
+  border: 3px solid $accent-color;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  &__wrap {
+    background-color: $accent-color;
+    margin-bottom: 18px;
+    padding-top: 20px;
+    padding-bottom: 14px;
+    // padding: 20px 0px 25px;
+  }
+
+  &__fieldset {    
+    border: none;
+    border-right: 5px solid $accent-color;
+    border-left: 5px solid $accent-color;
+    border-bottom: 0
+  }
+
+  &__legend {
+    font-family: Forum, Georgia, serif;
+    font-size: 30px;
+    line-height: 50px;
+    margin-bottom: 14px;  
+    letter-spacing: 1px;
+  }
+
+  &__label {
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    height: 66px;
+    border-radius: 10px;
+    border: none;
+
+    &[type='text'] {
+      margin-bottom: 23px;
+    }
+
+    &::placeholder {
+      color: $grey-color;
+      font-family: Forum, Georgia, serif;
+      font-size: 30px;
+      line-height: 50px; 
+      padding-left: 20px;
+    }
+
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    font-weight: 700;
+    padding: 10px 40px;   
+    letter-spacing: 1px;
+  }
+}
+.get-card {
+  text-align: right;
+  max-width: 460px;
+
+  &__title {
+    font-family: Forum, Georgia, serif;
+    font-size: 30px;
+    font-weight: 400;
+    word-spacing: 4px;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    line-height: 40px;
+    word-spacing: 2px;
+    margin-bottom: 33px;
+  }
+
+  &__wrap-btn {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+  }
+
+  &__btn {
+    font-size: 10px;
+    font-weight: 700;    
+    letter-spacing: 1px;
+    min-width: 75px;
+    min-height: 31px;
+  }
+}
+.btn {
+}

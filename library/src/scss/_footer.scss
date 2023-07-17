@@ -1,0 +1,64 @@
+.footer {
+  background-color: $second-dark;
+  color: $main-light;
+  font-size: 15px;
+  line-height: 20px;
+  padding-top: 20px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $main-light;
+  }
+
+  &__info {
+  }
+
+  &__address {
+    font-style: normal;
+    margin-bottom: 18px;
+  }
+
+  &__list-social {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__item-social {
+  }
+
+  &__link-social {
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: $accent-color;
+      transition: color 0.5s ease;
+    }
+  }
+
+  &__work-mode {
+    text-align: right;
+    
+  }
+
+  &__work-mode-day {
+  }
+
+  &__work-mode-time_weekday {    
+    margin-bottom: 10px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding-top: 44px;
+    padding-bottom: 44px;
+    letter-spacing: 2px; 
+  }
+
+  &__bottom-info:first-child {
+    margin-right: 59px;
+  }
+}

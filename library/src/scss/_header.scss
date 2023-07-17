@@ -1,6 +1,6 @@
 .header {
   background-color: $main-dark;
-  padding: 20px;
+  padding: 20px 0;
   
   &__container {
     display: flex;
@@ -13,10 +13,29 @@
     font-weight: 400;
     font-size: 30px;        
     line-height: 50px;
+    word-spacing: 5px;
+    flex-grow: 1;     
+    margin-right: 200px;    
+    text-shadow: transparent 1px 0 5px;
+    transition: text-shadow 0.3s;
+
+    &:hover {
+      text-shadow: $accent-color 1px 0 5px;
+      transition: text-shadow 0.3s;
+      
+    }
   }
 
-  &__nav {
-    flex-grow: 1; 
+  &__link {
+    transition: color 0.5s;
+    
+    &:hover {      
+      color: $accent-color;
+      transition: color 0.5s;
+    }
+  }
+
+  &__nav {    
     justify-content: flex-end;
     margin-right: 40px;
   }
