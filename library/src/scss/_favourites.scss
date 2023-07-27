@@ -34,49 +34,24 @@
 		}
 	}
 
-	&__input {
-		appearance: none;				
-		
-		&:before {
-			content: '';
-			display: block;
-			width: 17px;
-			height: 17px;
-			border-radius: 50%;
-			border: 1px solid $main-dark;
-			margin-right: 21px;
-			padding: 5px;
-			// border: 1px solid red;
-			
-		}
+	&__input {		
+		width: 17px;
+		height: 17px;
+		margin-right: 21px;
+		accent-color: $main-dark;
+		padding: 5px;
 
 	}
 
 	&__label {
 		display: block;
 		width: 110px;
-		// border: 1px solid red;
 	}
 
 	&__input:checked+&__label{			
 		font-weight: 700;				
 	}
 
-	&__input:checked+&__label:before{			
-		position: absolute;
-		// top: 10px;
-		// left: 4px;		
-		top: 50%;
-		left: 4px;
-		transform: translate(5%, -40%);
-		content: '';
-		display: block;		
-		width: 8px;
-		height: 8px;
-		border-radius: 50%;
-		background-color: $main-dark;
-		
-	}
 }
 
 .cards-list {

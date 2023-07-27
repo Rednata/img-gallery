@@ -277,21 +277,6 @@ export const avif = () =>
       }),
     );
 
-export const critCSS = () =>
-  gulp
-    .src(path.src.html)
-    .pipe(
-      critical({
-        base: path.dist.base,
-        inline: true,
-        css: [path.dist.cssIndex],
-      }),
-    )
-    .on('error', (err) => {
-      console.error(err.message);
-    })
-    .pipe(gulp.dest(path.dist.base));
-
 export const copy = () =>
   gulp
     .src(path.src.assets, {
@@ -340,6 +325,6 @@ const develop = (ready) => {
 
 export const base = gulp.parallel(html, scss, js, img, svg, webp, avif, copy);
 
-export const build = gulp.series(clear, base, critCSS);
+export const build = gulp.series(clear, base);
 
 export default gulp.series(develop, base, server);

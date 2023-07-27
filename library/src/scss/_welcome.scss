@@ -8,9 +8,8 @@
   background-size: cover;
 
   &__container {
-    height: 600px;  
-    
-    padding-top: 255px;
+    height: 600px;      
+    padding-top: 217px;
   }
 
   &__title-wrap {
@@ -27,6 +26,8 @@
     line-height: 50px; /* 125% */
     letter-spacing: 3px;
     text-transform: uppercase;
+    padding-top: 35px;
+    padding-bottom: 35px;
   }
 
   &__title-limit {
