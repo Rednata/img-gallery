@@ -6,9 +6,24 @@
   // border: 1px solid red;
 
   @include desktop {
-    flex-wrap: wrap;
-    line-height: 40px;
-    gap: 0 150px;
+    flex-wrap: wrap;    
+    gap: 0 95px;
+    justify-content: center;
+  }
+
+  @include laptop {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid red;
+    width: 332px;
+    background-color: $main-dark;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   &__list {

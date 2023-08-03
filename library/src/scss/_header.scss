@@ -15,7 +15,7 @@
     line-height: 50px;
     word-spacing: 5px;
     flex-grow: 1;     
-    margin-right: 200px;    
+    margin-right: calc(25% - 85px);    
     text-shadow: transparent 1px 0 5px;
     transition: text-shadow 0.3s;
 
@@ -38,6 +38,12 @@
   &__nav {    
     justify-content: flex-end;
     margin-right: 40px;
+  }
+
+  &__wrap-btn {
+    display: flex;
+    align-items: center;
+    gap: 40px;
   }
 
 }

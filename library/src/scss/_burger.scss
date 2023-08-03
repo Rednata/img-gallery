@@ -1,0 +1,15 @@
+.burger {
+  display: none;
+
+  @include laptop {
+    display: block;
+    width: 45px;
+    height: 20px;
+    background-color: transparent;
+    border: none;    
+    background-image: url("../img/burger.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

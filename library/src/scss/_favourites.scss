@@ -9,9 +9,6 @@
 		font-weight: 700;		
 		margin-bottom: 39px;	
 
-		@include desktop {
-			text-align: center;
-		}
 	}
 
 	&__radio-wrap {
@@ -20,7 +17,7 @@
 		margin-bottom: 38px;		
 
 		@include desktop {
-			justify-content: center;
+
 		}
 	}
 
@@ -66,5 +63,10 @@
 		flex-direction: column;
 		max-width: 550px;
 		margin: 0 auto;
+		transform: translateX(-20px);
+	}
+	@include laptop {
+
+		
 	}
 }

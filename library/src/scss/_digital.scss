@@ -9,10 +9,18 @@
   &__wrap {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
+
+    @include laptop {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
   }
 
   &__wrap-form {
     min-width: 600px;
+
   }
 
   &__wrap-form-title {
@@ -97,24 +105,41 @@
   text-align: right;
   max-width: 460px;
 
+  @include laptop {
+    text-align: center;
+    max-width: 75%;
+  }
+
   &__title {
     font-family: Forum, Georgia, serif;
     font-size: 30px;
     font-weight: 400;
     word-spacing: 4px;
     margin-bottom: 30px;
+
+    @include laptop {
+      margin-bottom: 35px;
+    }
   }
 
   &__text {
     line-height: 40px;
     word-spacing: 2px;
     margin-bottom: 33px;
+
+    @include laptop {
+      margin-bottom: 39px;
+    }
   }
 
   &__wrap-btn {
     display: flex;
     gap: 20px;
     justify-content: flex-end;
+
+    @include laptop {
+      justify-content: center;
+    }
   }
 
   &__btn {
