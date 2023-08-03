@@ -12,10 +12,6 @@
     min-width: 0;
   }
 
-  &__content {
-
-  }
-
   &__recommend {    
     font-family: Forum, Georgia, serif;
     line-height: 40px; /* 200% */
@@ -72,7 +68,6 @@
       border: 1px solid $accent-color;
       background-color: transparent;
     }
-
   }
 
   &__img-wrap {

@@ -17,10 +17,6 @@
       }
     }    
   }
-
-  &__menu {
-
-  }
 }
 
 .menu {
@@ -53,17 +49,13 @@
   }
 
   &__list_left {
-
     @include laptop {
-      // width: 61%;
       max-width: 442px;
     }
   }
 
   &__list_right &__item {
-    justify-content: flex-end;  
-    // gap: 55px;
-
+    justify-content: flex-end;      
   }
 
   &__item {
@@ -106,7 +98,4 @@
     }
   }
 
-  &__dessert {
-
-  }
 }

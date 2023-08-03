@@ -26,7 +26,7 @@
   &__title-wrap {
     background-color: $second-dark;
     max-width: 600px;
-    // margin-left: -20px;
+    margin-left: -20px;
 
     @include tablet {
       width: 100%;

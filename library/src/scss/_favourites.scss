@@ -8,7 +8,6 @@
 	&__direct {
 		font-weight: 700;		
 		margin-bottom: 39px;	
-
 	}
 
 	&__cards-wrap {
@@ -21,12 +20,13 @@
 	&__radio-wrap {
 		display: flex;
 		column-gap: 43px;		
-		margin-bottom: 38px;		
+		margin-bottom: 38px;	
+		width: 100%;
 
 		@include tablet {
 			flex-wrap: wrap;
-			row-gap: 20px;
-			max-width: 80%;
+			row-gap: 15px;
+			max-width: 60%;
 			justify-content: space-between
 		}
 	}
@@ -37,7 +37,15 @@
 		position: relative;
 
 		&:nth-child(3) {
-			margin-right: 15px;
+			margin-right: 15px;		
+		}	
+
+		&:nth-child(4) label{			
+			width: 90px;
+
+			@include tablet {
+				width: 110px;
+			}
 		}
 	}
 
@@ -47,7 +55,6 @@
 		margin-right: 21px;
 		accent-color: $main-dark;
 		padding: 5px;
-
 	}
 
 	&__label {
@@ -58,7 +65,6 @@
 	&__input:checked+&__label{			
 		font-weight: 700;				
 	}
-
 }
 
 .cards-list {
@@ -74,9 +80,5 @@
 		max-width: 550px;
 		margin: 0 auto;
 		transform: translateX(-20px);
-	}
-	@include laptop {
-
-		
 	}
 }

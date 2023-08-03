@@ -1,5 +1,4 @@
 .about {
-  // margin-bottom: 20px;
 
   &__title {
     margin-bottom: 40px;
@@ -23,13 +22,8 @@
       margin-bottom: 16px;
     }
   }
+}
 
-  &__pagination {
-    // margin-bottom: 47px;
-  }
-}
-.title {
-}
 .slider {
   max-width: 1400px;  
   overflow: hidden;
@@ -74,15 +68,9 @@
     display: flex;    
     justify-content: start;
     gap: 25px;    
-    // margin-left: 50px;
-    // margin-right: 50px;    
 
     @media (max-width: 1439px) {     
       gap: calc(100% * 0.15);      
-    }
-
-    @media desktop {
-
     }
   }
 
@@ -96,8 +84,7 @@
   }
 }
 .pagination {
-  display: flex;
-  // gap: 5px;
+  display: flex;  
   justify-content: center;
 
   &__item {
