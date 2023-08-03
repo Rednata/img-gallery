@@ -12,14 +12,12 @@
   }
 
   &__slider-wrapper {
-    position: relative;
-    border: 1px solid red;
+    position: relative;    
 
   }
 
   &__slider {
-    margin-bottom: 30px;
-    border: 1px solid red;
+    margin-bottom: 30px;    
 
     @include laptop {
       margin-bottom: 16px;

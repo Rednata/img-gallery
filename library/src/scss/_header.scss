@@ -1,10 +1,11 @@
 .header {
   background-color: $main-dark;
-  padding: 20px 0;
+  padding: 20px 0;    
   
   &__container {
     display: flex;
-    align-items: center;
+    align-items: center;    
+    // overflow: hidden;    
   }
 
   &__title {
@@ -38,6 +39,7 @@
   &__nav {    
     justify-content: flex-end;
     margin-right: 40px;
+    overflow: hidden;
   }
 
   &__wrap-btn {
@@ -54,4 +56,13 @@
 }
 
 
-
+.overlay:after {    
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);   
+}

@@ -1,15 +1,22 @@
 .burger {
   display: none;
+  width: 45px;
+  height: 20px;
+  background-color: transparent;
+  border: none;    
+  background-image: url("../img/burger.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 10;
 
   @include laptop {
     display: block;
-    width: 45px;
-    height: 20px;
-    background-color: transparent;
-    border: none;    
-    background-image: url("../img/burger.svg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    
+  }
+
+  &_close {
+    background-image: url("../img/burger_close.svg");
   }
 }
