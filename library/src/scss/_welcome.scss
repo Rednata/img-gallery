@@ -16,12 +16,22 @@
   &__container {
     height: 600px;      
     padding-top: 217px;
+
+    @include tablet {    
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   &__title-wrap {
     background-color: $second-dark;
-    width: 600px;
-    margin-left: -20px;
+    max-width: 600px;
+    // margin-left: -20px;
+
+    @include tablet {
+      width: 100%;
+      margin-left: 0;
+    }
   }
 
   &__title {

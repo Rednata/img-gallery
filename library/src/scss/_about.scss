@@ -13,12 +13,13 @@
 
   &__slider-wrapper {
     position: relative;
-    // border: 1px solid red;
+    border: 1px solid red;
+
   }
 
   &__slider {
     margin-bottom: 30px;
-    // border: 1px solid red;
+    border: 1px solid red;
 
     @include laptop {
       margin-bottom: 16px;
@@ -56,6 +57,10 @@
 
     @include laptop {
       display: block;
+    }    
+
+    @include tablet {
+      display: none;
     }    
   }
 

@@ -8,6 +8,10 @@
   min-height: 555px;
   position: relative;
 
+  @include tablet {
+    min-width: 0;
+  }
+
   &__content {
 
   }

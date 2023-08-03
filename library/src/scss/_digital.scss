@@ -21,6 +21,10 @@
   &__wrap-form {
     min-width: 600px;
 
+    @include tablet {
+      min-width: 0;
+    }
+
   }
 
   &__wrap-form-title {

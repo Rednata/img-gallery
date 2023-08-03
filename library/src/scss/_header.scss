@@ -44,6 +44,11 @@
     display: flex;
     align-items: center;
     gap: 40px;
+
+    @include tablet {
+      flex-direction: column-reverse;
+      gap: 20px 0;
+    }
   }
 
 }
