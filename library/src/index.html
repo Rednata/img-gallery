@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
   <title>Brooklin Public Library</title>
   <link rel="stylesheet" href="css/index.min.css">
-  <script src="js/index.min.js"></script>
+  <script src="js/index.min.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -15,8 +15,8 @@
       <h1 class="header__title">
         <a href="" class="header__link">Brooklyn&nbsp;Public&nbsp;Library</a>
       </h1>
-      <nav class="nav header__nav">
-        <ul class="nav nav__list">
+      <nav class="header__nav">
+        <ul class="nav nav__list displayNone">
           <li class="nav__item">
             <a href="#about" class="nav__link">About</a>
           </li>
@@ -33,13 +33,17 @@
             <a href="#digital" class="nav__link">Library Card</a>
           </li>
         </ul>
-      </nav>
-      <button class="auth header__auth">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14ZM18.6667 7.77778C18.6667 10.3551 16.5774 12.4444 14.0001 12.4444C11.4227 12.4444 9.33339 10.3551 9.33339 7.77778C9.33339 5.20045 11.4227 3.11111 14.0001 3.11111C16.5774 3.11111 18.6667 5.20045 18.6667 7.77778ZM19.4998 16.2781C20.9584 17.7367 21.7778 19.715 21.7778 21.7778H14L6.22225 21.7778C6.22225 19.715 7.0417 17.7367 8.50031 16.2781C9.95893 14.8194 11.9372 14 14 14C16.0628 14 18.0411 14.8194 19.4998 16.2781Z" />
-          </svg>
+      </nav>      
+      <div class="header__wrap-btn">
+        <button class="auth header__auth">        
+          <svg width="28" height="28">
+            <use href="./img/sprite.svg#profile"></use>
+          </svg>                        
       </button>
-    </div>
+      <button class="burger">                    
+      </button>
+      </div>      
+    </div>    
   </header>
 
   <main>
@@ -64,6 +68,9 @@
         The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside 
         </p>
         <div class="about__slider-wrapper">
+          <button class="slider__btn slider__btn_left">            
+          </button>
+          <button class="slider__btn slider__btn_right"></button>
     
           <div class="slider about__slider">
             <ul class="slider__list">
@@ -113,6 +120,12 @@
               <button class="pagination__btn"></button>
             </li>
             <li class="pagination__item">
+              <button class="pagination__btn"></button>
+            </li>
+            <li class="pagination__item notActive">
+              <button class="pagination__btn"></button>
+            </li>
+            <li class="pagination__item notActive">
               <button class="pagination__btn"></button>
             </li>
           </ul>
@@ -237,7 +250,7 @@
           In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation.         
         </p>        
         <p>
-          You can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts from bakery.
+          You can get a favorite book and read in coffee shop.our barista to cook you best coffee, and also you can try desserts from bakery.
         </p>
       </div>
       <div class="menu coffee__menu">
@@ -444,7 +457,7 @@
         <p class="footer__bottom-info">
           <a href="https://rs.school/js-stage0/">The Rolling Scopes School</a>
         </p>
-        <p class="footer__bottom-info">
+        <p class="footer__bottom-info">          
           <a href="https://github.com/Rednata">Natalya Z</a>
         </p>
       </div>

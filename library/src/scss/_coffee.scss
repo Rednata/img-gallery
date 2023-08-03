@@ -10,15 +10,24 @@
     line-height: 40px; 
     text-align: center;
     margin-bottom: 40px;
-  }
 
-  &__menu {
-    display: flex;
-    justify-content: space-between;
+    & p:last-child {
+      @include laptop {
+        // text-align: justify;        
+      }
+    }    
   }
 }
 
 .menu {
+  display: flex;
+  justify-content: space-between;
+
+  @include laptop {
+    flex-direction: column;
+    gap: 40px;
+  }
+
   &__wrap:last-child &__title {
     text-align: right;
   }
@@ -36,14 +45,17 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 40px;       
+    gap: 40px;           
+  }
 
+  &__list_left {
+    @include laptop {
+      max-width: 442px;
+    }
   }
 
   &__list_right &__item {
-    justify-content: flex-end;  
-    // gap: 55px;
-
+    justify-content: flex-end;      
   }
 
   &__item {
@@ -86,7 +98,4 @@
     }
   }
 
-  &__dessert {
-
-  }
 }

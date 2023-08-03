@@ -8,8 +8,8 @@
   min-height: 555px;
   position: relative;
 
-  &__content {
-
+  @include tablet {
+    min-width: 0;
   }
 
   &__recommend {    
@@ -68,7 +68,6 @@
       border: 1px solid $accent-color;
       background-color: transparent;
     }
-
   }
 
   &__img-wrap {

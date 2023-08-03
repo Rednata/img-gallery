@@ -1,5 +1,4 @@
 .about {
-  // margin-bottom: 20px;
 
   &__title {
     margin-bottom: 40px;
@@ -12,18 +11,19 @@
   }
 
   &__slider-wrapper {
+    position: relative;    
+
   }
 
   &__slider {
-    margin-bottom: 30px;
-  }
+    margin-bottom: 30px;    
 
-  &__pagination {
-    // margin-bottom: 47px;
+    @include laptop {
+      margin-bottom: 16px;
+    }
   }
 }
-.title {
-}
+
 .slider {
   max-width: 1400px;  
   overflow: hidden;
@@ -37,20 +37,40 @@
   @include desktop {
     max-width: 450px;   
   }
+  &__btn {
+    display: none;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 47%;    
+    background-color: transparent;
+    border: none;
+    background-image: url("../img/btn-left.svg");
+
+    @include laptop {
+      display: block;
+    }    
+
+    @include tablet {
+      display: none;
+    }    
+  }
+
+  &__btn_left {
+    left: 8%;
+  }
+  &__btn_right {
+    right: 8%;
+    transform: rotate(180deg);
+  }
 
   &__list {    
     display: flex;    
     justify-content: start;
     gap: 25px;    
-    // margin-left: 50px;
-    // margin-right: 50px;
 
     @media (max-width: 1439px) {     
       gap: calc(100% * 0.15);      
-    }
-
-    @media desktop {
-
     }
   }
 
@@ -64,8 +84,7 @@
   }
 }
 .pagination {
-  display: flex;
-  // gap: 5px;
+  display: flex;  
   justify-content: center;
 
   &__item {
@@ -83,5 +102,13 @@
 
   &__btn_active {    
     background-color: $accent-color;
+  }
+}
+
+.notActive {
+  display: none;
+
+  @include desktop {
+    display: block;
   }
 }

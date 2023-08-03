@@ -1,10 +1,11 @@
 .header {
   background-color: $main-dark;
-  padding: 20px 0;
+  padding: 20px 0;    
   
   &__container {
     display: flex;
-    align-items: center;
+    align-items: center;    
+    // overflow: hidden;    
   }
 
   &__title {
@@ -15,7 +16,7 @@
     line-height: 50px;
     word-spacing: 5px;
     flex-grow: 1;     
-    margin-right: 200px;    
+    margin-right: calc(25% - 85px);    
     text-shadow: transparent 1px 0 5px;
     transition: text-shadow 0.3s;
 
@@ -38,9 +39,30 @@
   &__nav {    
     justify-content: flex-end;
     margin-right: 40px;
+    overflow: hidden;
+  }
+
+  &__wrap-btn {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @include tablet {
+      flex-direction: column-reverse;
+      gap: 20px 0;
+    }
   }
 
 }
 
 
-
+.overlay:after {    
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);   
+}
