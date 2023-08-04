@@ -5,7 +5,6 @@
   &__container {
     display: flex;
     align-items: center;    
-    // overflow: hidden;    
   }
 
   &__title {
@@ -15,8 +14,7 @@
     font-size: 30px;        
     line-height: 50px;
     word-spacing: 5px;
-    flex-grow: 1;     
-    margin-right: calc(25% - 85px);    
+    flex-grow: 1;      
     text-shadow: transparent 1px 0 5px;
     transition: text-shadow 0.3s;
 
@@ -46,11 +44,6 @@
     display: flex;
     align-items: center;
     gap: 40px;
-
-    @include tablet {
-      flex-direction: column-reverse;
-      gap: 20px 0;
-    }
   }
 
 }
