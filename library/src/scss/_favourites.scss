@@ -8,19 +8,26 @@
 	&__direct {
 		font-weight: 700;		
 		margin-bottom: 39px;	
+	}
 
-		@include desktop {
-			text-align: center;
+	&__cards-wrap {
+		@include tablet {
+			padding-left: 15px;
+			padding-right: 15px;
 		}
 	}
 
 	&__radio-wrap {
 		display: flex;
-		gap: 43px;		
-		margin-bottom: 38px;		
+		column-gap: 43px;		
+		margin-bottom: 38px;	
+		width: 100%;
 
-		@include desktop {
-			justify-content: center;
+		@include tablet {
+			flex-wrap: wrap;
+			row-gap: 15px;
+			max-width: 60%;
+			justify-content: space-between
 		}
 	}
 
@@ -30,7 +37,15 @@
 		position: relative;
 
 		&:nth-child(3) {
-			margin-right: 15px;
+			margin-right: 15px;		
+		}	
+
+		&:nth-child(4) label{			
+			width: 90px;
+
+			@include tablet {
+				width: 110px;
+			}
 		}
 	}
 
@@ -40,7 +55,6 @@
 		margin-right: 21px;
 		accent-color: $main-dark;
 		padding: 5px;
-
 	}
 
 	&__label {
@@ -51,7 +65,6 @@
 	&__input:checked+&__label{			
 		font-weight: 700;				
 	}
-
 }
 
 .cards-list {
@@ -66,5 +79,6 @@
 		flex-direction: column;
 		max-width: 550px;
 		margin: 0 auto;
+		transform: translateX(-20px);
 	}
 }

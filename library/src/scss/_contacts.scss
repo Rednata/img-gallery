@@ -11,9 +11,11 @@
     line-height: 40px; /* 200% */
     letter-spacing: 2px;
     text-transform: capitalize; 
-  }
 
-  &__info {
+    @include desktop {
+      flex-direction: column;
+      row-gap: 100px;
+    }
   }
 
   &__info-title {
@@ -31,26 +33,27 @@
     }
   }
   
-  
-
   &__info-person-title {
     font-weight: 700;
     margin-bottom: 20px;
   }
 
   &__info-text {
-
-
     &_bold {
       font-weight: 700;
     }
   }
 
   &__map {
+    @include desktop{      
+      margin: 0 15px;
+    }    
   }
 
   &__map-img {
+    @include desktop{      
+      width: 100%;
+    }
   }
 }
-.title {
-}
+
