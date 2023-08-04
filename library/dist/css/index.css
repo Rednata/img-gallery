@@ -740,15 +740,6 @@ iframe {
   line-height: 50px;
 }
 
-.nav_active {
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  -webkit-transition: -webkit-transform 0.6s;
-  transition: -webkit-transform 0.6s;
-  transition: transform 0.6s;
-  transition: transform 0.6s, -webkit-transform 0.6s;
-}
-
 .nav__link:after {
   content: "";
   display: block;
@@ -1556,6 +1547,15 @@ iframe {
     transition: -webkit-transform 1.2s;
     transition: transform 1.2s;
     transition: transform 1.2s, -webkit-transform 1.2s;
+  }
+
+  .nav_active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+    transition: transform 0.6s, -webkit-transform 0.6s;
   }
 
   .displayNone {
