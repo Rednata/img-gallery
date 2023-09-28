@@ -5,6 +5,7 @@ font-face {
 
 html {
   box-sizing: border-box;
+  position: relative;
 }
 
 body {
@@ -29,10 +30,13 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 0 25px;
+  padding-top: 20px;
 }
 
 .title {
   font-size: 36px;
+  color: #edcd51;
+  margin: 0;
 }
 
 .form {
@@ -47,6 +51,18 @@ main {
   border: none;
   width: 100%;
   border-radius: 6px;
+  outline-color: #edcd51;
+  padding-left: 10px;
+  font-size: 18px;
+  color: #2D2D2D;
+  outline-offset: -2px; /* 2 */
+}
+
+input[type='search']::-webkit-search-decoration, 
+input[type='search']::-webkit-search-cancel-button, 
+input[type='search']::-webkit-search-results-button, 
+input[type='search']::-webkit-search-results-decoration {
+	display: none;
 }
 
 .button {
@@ -55,13 +71,22 @@ main {
   right: 0;
   height: 100%;
   border: none;
-  background-color: transparent;
-  background-image: url("./search.svg");
+  background-color: transparent;  
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   padding: 10px;
   margin-right: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.button_search {
+  background-image: url("./assets/search.svg");
+}
+
+.button_close {
+  background-image: url("./assets/close.svg");
 }
 
 .list {
@@ -87,6 +112,21 @@ img{
   display: block;
 }
 
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50vh;
+  transform: translate(-50%, -50%);  
+  width: 35%;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 22px;
+}
+
 @media (max-width: 860px) {
   .item {
     width: 49%;
@@ -96,6 +136,7 @@ img{
 @media (max-width: 650px) {
   .header {
     flex-direction: column;
+    gap: 15px;
   }
   .form {
     height: 24px;
@@ -105,6 +146,9 @@ img{
 }
 
 @media (max-width: 480px) {
+  .title {
+    font-size: 30px;
+  }
   .item {
     width: 100%;
   }
