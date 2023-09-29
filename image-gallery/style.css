@@ -8,6 +8,14 @@ html {
   position: relative;
 }
 
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
 body {
   font-family: Arial;
   background-color: #2D2D2D;
@@ -97,10 +105,10 @@ input[type='search']::-webkit-search-results-decoration {
   list-style: none;
   width: 100%;
   padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 .item {
+  display: flex;
   border: 2px solid #2D2D2D;
   width: 32.8%;
 }
@@ -112,8 +120,20 @@ img{
   display: block;
 }
 
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;  
+  bottom: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .modal {
   display: flex;
+  gap: 10px;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -121,11 +141,40 @@ img{
   top: 50vh;
   transform: translate(-50%, -50%);  
   width: 35%;
-  height: 100px;
+  height: 120px;
   background-color: #fff;
   border-radius: 10px;
   font-size: 22px;
 }
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+ }
+ 
+ .logoRS{
+ width: 60%;
+ height: 80px;
+ }
+ 
+ .footer__logo{
+ display: flex;
+ justify-content: right;
+ align-items: center;
+ width: 30%;
+ }
+ 
+ .logoGH{
+ width: 100%;
+ }
+ 
+ .year{
+ margin-top: 0;
+ margin-bottom: 0;
+ font-size: 130%;
+ padding-left: 14%;
+ font-weight: bold;  
+ }
 
 @media (max-width: 860px) {
   .item {
@@ -155,5 +204,9 @@ img{
   .form {
     width: 80%;
   }
+  .logoRS{
+    width: 50%;
+    height: 60px;
+    }
 }
 
