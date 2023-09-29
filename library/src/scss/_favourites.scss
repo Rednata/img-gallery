@@ -1,0 +1,84 @@
+.favour {
+	padding-top: 10px;
+
+	&__title {
+		margin-bottom: 38px;
+	}
+
+	&__direct {
+		font-weight: 700;		
+		margin-bottom: 39px;	
+	}
+
+	&__cards-wrap {
+		@include tablet {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+
+	&__radio-wrap {
+		display: flex;
+		column-gap: 43px;		
+		margin-bottom: 38px;	
+		width: 100%;
+
+		@include tablet {
+			flex-wrap: wrap;
+			row-gap: 15px;
+			max-width: 60%;
+			justify-content: space-between
+		}
+	}
+
+	&__radio-item {			
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		&:nth-child(3) {
+			margin-right: 15px;		
+		}	
+
+		&:nth-child(4) label{			
+			width: 90px;
+
+			@include tablet {
+				width: 110px;
+			}
+		}
+	}
+
+	&__input {		
+		width: 17px;
+		height: 17px;
+		margin-right: 21px;
+		accent-color: $main-dark;
+		padding: 5px;
+	}
+
+	&__label {
+		display: block;
+		width: 110px;
+	}
+
+	&__input:checked+&__label{			
+		font-weight: 700;				
+	}
+}
+
+.cards-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-right: 40px;
+	gap: 40px;
+	margin-bottom: 40px;
+
+	@include desktop {
+		flex-direction: column;
+		max-width: 550px;
+		margin: 0 auto;
+		transform: translateX(-20px);
+	}
+}

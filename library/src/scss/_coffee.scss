@@ -1,0 +1,101 @@
+.coffee {
+  padding-top: 20px;
+  margin-bottom: 40px;
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__descript {
+    letter-spacing: 2px;
+    line-height: 40px; 
+    text-align: center;
+    margin-bottom: 40px;
+
+    & p:last-child {
+      @include laptop {
+        // text-align: justify;        
+      }
+    }    
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+
+  @include laptop {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__wrap:last-child &__title {
+    text-align: right;
+  }
+
+  &__title {
+    color: $accent-color;
+    font-family: Forum;
+    font-size: 40px;  
+    line-height: 40px; /* 100% */
+    letter-spacing: 2px;
+    text-transform: capitalize; 
+    margin-bottom: 40px;    
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;           
+  }
+
+  &__list_left {
+    @include laptop {
+      max-width: 442px;
+    }
+  }
+
+  &__list_right &__item {
+    justify-content: flex-end;      
+  }
+
+  &__item {
+    display: flex;    
+    justify-content: space-between;
+    gap: 57px;            
+  }
+
+  &__item-name, 
+  &__item-price {
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize; 
+
+  }
+
+  &__item-name {
+    text-align: right;    
+  }
+
+  &__item-price {
+    display: flex;
+    align-items: center;  
+    letter-spacing: normal;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 1px;
+      background-color: $accent-color;
+      margin-right: 60px;
+    }
+  }
+
+  &__list_right &__item-price {    
+
+    &:before {  
+      margin-right: 55px;
+    }
+  }
+
+}

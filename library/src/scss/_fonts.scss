@@ -1,0 +1,17 @@
+@font-face {
+  @include font(Inter, 400);
+  src: url(../fonts/inter-v12-latin_cyrillic-regular.woff2) format("woff2");
+  src: url(../fonts/inter-v12-latin_cyrillic-regular.woff) format("woff");
+}
+
+@font-face {
+  @include font(Inter, 700);
+  src: url(../fonts/inter-v12-latin_cyrillic-700.woff2) format("woff2");
+  src: url(../fonts/inter-v12-latin_cyrillic-700.woff) format("woff");
+}
+
+@font-face {
+  @include font(Forum, 400);
+  src: url(../fonts/ForumRegular.woff2) format("woff2");
+  src: url(../fonts/ForumRegular.woff) format("woff");
+}

@@ -1,0 +1,136 @@
+html {
+  position: relative;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  // max-width: 1440px;
+  font-family: Inter, Arial, sans-serif;
+  line-height: 1.3;
+  font-size: 20px;
+  font-weight: 400;
+  color: $main-dark; /*цвет под ваш проект*/
+  background-color: $main-light; /*цвет под ваш проект*/
+  margin: 0 auto;
+  // background-image: url(../img/sprite.svg#fire);
+  // background-position: center top 50%;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+button {
+  padding: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+fieldset {
+  margin: 0;
+}
+
+iframe {
+  border: none;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+
+.container {
+  max-width: 1480px;
+  padding: 0 20px;
+  margin: 0 auto;  
+}
+
+@include tablet {
+  body {
+    // background-color: red;
+  }
+}
+
+@include laptop {
+  body {
+    // background-color: green;
+  }
+}
+
+@include desktop {
+  body {
+    // background-color: blue;
+  }
+}
+
+.title {
+  color: $second-dark;
+  font-family: Forum, Georgia, serif;
+  font-size: 40px;  
+  line-height: 40px; /* 100% */
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-transform: capitalize; 
+  text-align: center;  
+  
+  &::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 50px;
+    background-color: $second-dark;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
+
+.button {
+  color: $second-dark;    
+  border-radius: 2px;
+  border: 1px solid $second-dark;
+  background-color: transparent;
+  transition: background-color 0.5s, border 0.5s;
+
+  &:hover {
+    border: 1px solid transparent;
+    background-color: $accent-color;
+    transition: background-color 0.5s, border 0.5s;
+  }
+}
