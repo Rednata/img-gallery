@@ -1,5 +1,5 @@
 const ID = 'a-8uLZVXLAYyWkGpYyd8PhJYoIB-jt8OHpo5xNlhopY';
-const URL_API = new URL('https://api.unsplash.com/search/photos?per_page=12&extras=url_m&orientation=landscape&query=image');
+const URL_API = new URL('https://api.unsplash.com/search/photos?per_page=1&extras=url_m&orientation=landscape&query=image');
 
 const imagesList = document.querySelector('.list');
 const form = document.querySelector('.form');
@@ -39,9 +39,20 @@ const showError = () => {
 
 }
 
-const showdata = (imagesArray) => {
-  if (imagesArray.length === 0) {
-    getData('image');
+const showdata = (imagesArray, value) => {
+  if (imagesArray.length === 0) {    
+    imagesList.insertAdjacentHTML('afterend',
+    `    
+      <div class="noValueSearch">
+        <p>По вашему запросу ${value} ничего не найдено</p>
+        <p>Попробуйте ввести другой запрос</p>      
+      </div>        
+        
+    `
+    )
+    setTimeout(() => {
+      document.querySelector('.noValueSearch').remove();
+    }, 3000);
   }
   const arr = imagesArray.map(createLi);
   imagesList.append(...arr);
@@ -57,11 +68,11 @@ const getData = async(value) => {
         Authorization: `Client-ID ${ID}`
       }
     });    
-    if (response.status === 404) showError();
+    if (response.status === 403) showError();
     const {results} = await response.json();    
     const imagesArray = results.map(item => item.links.download);        
     imagesList.innerHTML = '';
-    showdata(imagesArray);
+    showdata(imagesArray, value);
   } catch(e) {
     console.log(e);
   }
