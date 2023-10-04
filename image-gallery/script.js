@@ -1,4 +1,4 @@
-const ID = 'a-8uLZVXLAYyWkGpYyd8PhJYoIB-jt8OHpo5xNlhopY';
+const ID = 'a-8uLZVXLAYyWkGpYyd8PhJYoIB-jt8OHpo5xNlhopY1';
 const URL_API = new URL('https://api.unsplash.com/search/photos?per_page=12&extras=url_m&orientation=landscape&query=image');
 
 const imagesList = document.querySelector('.list');
