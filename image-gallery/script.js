@@ -4,7 +4,8 @@ const URL_API = new URL('https://api.unsplash.com/search/photos?per_page=12&extr
 const imagesList = document.querySelector('.list');
 const form = document.querySelector('.form');
 const input = document.querySelector('.input');
-const button = document.querySelector('.button');
+const buttonSearch = document.querySelector('.button_search');
+const buttonClose = document.querySelector('.button_close');
 
 const createLi = (path) => {    
   const li = document.createElement('li');
@@ -70,7 +71,6 @@ const getData = async(value) => {
     });    
     if (response.status === 403) showError();
     const {results} = await response.json();    
-    console.log('results: ', results);
     const imagesArray = results.map(item => item.urls.small);        
     imagesList.innerHTML = '';
     showdata(imagesArray, value);
@@ -81,24 +81,28 @@ const getData = async(value) => {
 
 getData();
 
-const showClose = () => {
-  button.classList.remove('button_search');
-  button.classList.add('button_close');
+const showCloseBtn = () => {
+  buttonClose.classList.remove('button_hidden');
+  form.classList.add('form_hidden');
 }
 
-const showSearch = () => {
-  button.classList.remove('button_close');
-  button.classList.add('button_search');
+const showSearchBtn = () => {
+  buttonClose.classList.add('button_hidden');
+  form.classList.remove('form_hidden');
+  input.focus();
 }
 
 form.addEventListener('submit', e => {
   e.preventDefault();
   const value = form.input.value
-  showSearch();
-  form.input.value = '';
   getData(value);
 })
 
 input.addEventListener('input', () => {
-  showClose();
+  showCloseBtn()
+})
+
+buttonClose.addEventListener('click', () => {
+  form.input.value = '';
+  showSearchBtn();
 })
