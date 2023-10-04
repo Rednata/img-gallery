@@ -70,7 +70,8 @@ const getData = async(value) => {
     });    
     if (response.status === 403) showError();
     const {results} = await response.json();    
-    const imagesArray = results.map(item => item.links.download);        
+    console.log('results: ', results);
+    const imagesArray = results.map(item => item.urls.small);        
     imagesList.innerHTML = '';
     showdata(imagesArray, value);
   } catch(e) {
